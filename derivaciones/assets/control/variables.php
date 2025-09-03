@@ -8,6 +8,7 @@ $serverName = "192.168.0.252"; // sin coma y sin puerto
 $dbName = "Derivaciones";  
 
 // Usuario y contraseña de SQL Server
-$userName = "desarrollo2";
-$password = "lisapetisa1";
+$userName = "";
+$password = "";
 ?>
+
