@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derivación de Pacientes</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="derivation-container">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+            <h1 style="margin:0;">Derivación de Pacientes</h1>
+            <button id="cerrarSesion" type="button" class="cerrar-sesion-btn">Cerrar sesión</button>
+        </div>
+        <div id="bienvenida" class="bienvenida"></div>
+        <form id="derivation-form">
+            <label for="nombre">Nombre y Apellido del paciente:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="obra-social">Obra Social:</label>
+            <select id="obra-social" name="obra-social" required>
+                <option value="">Seleccione una obra social</option>
+                <option value="OSDE">OSDE</option>
+                <option value="Swiss Medical">Swiss Medical</option>
+                <option value="Galeno">Galeno</option>
+                <option value="IOMA">IOMA</option>
+            </select>
+
+            <label for="diagnostico">Diagnóstico:</label>
+            <textarea id="diagnostico" name="diagnostico" required></textarea>
+
+            <label for="administrativo">Administrativo que carga:</label>
+            <input type="text" id="administrativo" name="administrativo" readonly required>
+
+            <label for="sector">Sector:</label>
+            <select id="sector" name="sector" required>
+                <option value="">Seleccione un sector</option>
+                <option value="Guardia">Guardia</option>
+                <option value="Internación">Internación</option>
+                <option value="Terapia Intensiva">Terapia Intensiva</option>
+            </select>
+
+            <label for="medico">Médico que acepta derivación:</label>
+            <select id="medico" name="medico" required>
+                <option value="">Seleccione un médico</option>
+            </select>
+            <div id="alta-medico" style="display:none;margin-top:10px;">
+                <label for="nuevo-medico-nombre">Nombre y Apellido del nuevo médico:</label>
+                <input type="text" id="nuevo-medico-nombre" name="nuevo-medico-nombre" placeholder="Nombre y Apellido">
+                <button type="button" id="guardarNuevoMedico">Guardar médico</button>
+            </div>
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="">Seleccione estado</option>
+                <option value="llego">Llego</option>
+                <option value="pendiente">Pendiente de arribo</option>
+                <option value="rechazado">Rechazado</option>
+            </select>
+
+            <label for="observaciones">Observaciones:</label>
+            <textarea id="observaciones" name="observaciones"></textarea>
+
+            <button type="submit">Enviar Derivación</button>
+        </form>
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
